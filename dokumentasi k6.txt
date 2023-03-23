@@ -1,0 +1,24 @@
+Secara default, k6 akan mengumpulkan metrik berikut setiap kali Anda menjalankan
+pengujian:
+● vus — jumlah virtual users
+● vus_max — maksimal virtual users yang di alokasikan untuk load test
+● iterations — aggregated number of times the default function is called
+● iteration_duration — total waktu yang dibutuhkan untuk execute the default
+function
+● dropped_iterations — jumlah dari iterations yang tidak dapat di mulai
+● data_received — jumlah data yang diterima
+● data_sent — jumlah data yang dikirim
+● checks — rate of successful checks
+Selain itu, ini juga akan menghasilkan keluaran berikut jika Anda memanggil
+permintaan HTTP:
+● http_reqs — total requests yang di generate oleh k6
+● http_req_blocked — waktu yang dihabiskan untuk menunggu koneksi TCP
+connection sebelum initiating the request
+● http_req_connecting — waktu yang dihabiskan untuk TCP connection
+● http_req_tls_handshaking — waktu yang dihabiskan pada TLS handshaking
+● http_req_sending — waktu yang dihabiskan untuk mengirim data
+● http_req_waiting — waktu yang dihabiskan untuk menunggu response dari
+remote host
+● http_req_receiving — waktu yang dihabiskan untuk menerima data
+● http_req_duration — total waktu untuk request. Diperoleh dari total
+http_req_sending + http_req_waiting + http_req_receiving.
